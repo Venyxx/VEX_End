@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterControl : MonoBehaviour
 {
     CharacterController characterController;
-    public float MovementSpeed =1;
+    public float MovementSpeed = 1;
     
 
     private Camera cam;
@@ -14,6 +14,7 @@ public class CharacterControl : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         cam = Camera.main;
+        Debug.Log (Camera.main);
     }
  
     void Update()

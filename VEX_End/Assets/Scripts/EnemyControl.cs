@@ -9,7 +9,7 @@ public Transform player;
 public float playerDistance;
 
 //enemy config--------
-public float awareAI = 10f;
+public float awareAI = 50f;
 public float aiMoveSpeed;
 public float damping = 6.0f;
 
@@ -43,16 +43,16 @@ void Update ()
     if(playerDistance < awareAI)
     {
         //far too close
-        if (playerDistance > 2f)
+        if (playerDistance > 10f)
         {
             Chase();
         } 
-        else 
-            goToNextPoint();
+        //else 
+            //goToNextPoint();
     }
-
-    if (agent.remainingDistance < 0.5f)
-        goToNextPoint();
+        //turn this script on if you want him to go back to main behavior after 
+    if (agent.remainingDistance < 9f)
+       goToNextPoint();
 }
 void LookAtPlayer()
 {
@@ -70,6 +70,6 @@ void goToNextPoint ()
 
 void Chase ()
  {
-     transform.Translate (Vector3.forward * aiMoveSpeed * Time.deltaTime);
+     transform.Translate (Vector3.forward * 2 * aiMoveSpeed * Time.deltaTime);
  }
 }

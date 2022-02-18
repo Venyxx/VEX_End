@@ -7170,7 +7170,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7964463001076261595, guid: 2f173d9f949dab14789e05c486b4c5b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f173d9f949dab14789e05c486b4c5b7, type: 3}
 --- !u!1001 &2310105582693020997
 PrefabInstance:
@@ -7201,7 +7202,11 @@ PrefabInstance:
       objectReference: {fileID: 517229548}
     - target: {fileID: 5227793988268017070, guid: cbd95813c0ce1b145941d97b03fee3f0, type: 3}
       propertyPath: awareAI
-      value: 21
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227793988268017070, guid: cbd95813c0ce1b145941d97b03fee3f0, type: 3}
+      propertyPath: playerDistance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5227793988268017070, guid: cbd95813c0ce1b145941d97b03fee3f0, type: 3}
       propertyPath: navPoint.Array.data[0]

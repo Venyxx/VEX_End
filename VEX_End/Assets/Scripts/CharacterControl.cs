@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    CharacterController characterController;
+    public float MovementSpeed =1;
+    
 
-    // Update is called once per frame
+    private Camera cam;
+ 
+    private void Start()
+    {
+        characterController = GetComponent<CharacterController>();
+        cam = Camera.main;
+    }
+ 
     void Update()
     {
-        
+        // player movement - forward, backward, left, right
+        float horizontal = Input.GetAxis("Horizontal") * MovementSpeed;
+        float vertical = Input.GetAxis("Vertical") * MovementSpeed;
+        characterController.Move((cam.transform.right * horizontal + cam.transform.forward * vertical) * Time.deltaTime);
     }
+
+
+
 }

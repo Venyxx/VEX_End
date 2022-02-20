@@ -29,7 +29,7 @@ void Start ()
     agent.autoBraking = false;
 }
 
-void Update ()
+void FixedUpdate ()
 {
     playerDistance = Vector3.Distance (player.position, transform.position);
 

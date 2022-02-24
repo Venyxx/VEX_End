@@ -9,6 +9,10 @@ public class MainMenu : MonoBehaviour
    {
 SceneManager.LoadScene("GameScene");
    }
+    public void CreditsMenu ()
+   {
+SceneManager.LoadScene("Credits");
+   }
 public void ExitGame ()
 {
     Debug.Log("you are quitten");

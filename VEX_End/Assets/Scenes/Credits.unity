@@ -1069,7 +1069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: -31.8}
+  m_AnchoredPosition: {x: 2, y: -51.5}
   m_SizeDelta: {x: 346.1076, y: -83.7079}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073050441
@@ -1120,8 +1120,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Led By: Vanessa Scott\nArt By: Carlos Rojas & Kirsten Futch\nCode By:
-    Vanessa Scott & Samuel Clarke\nDesign By: Jack Galeassi & Adeel Karim \n\n"
+  m_Text: "Art By: Carlos Rojas & Kirsten Futch\nCode By: Vanessa Scott & Samuel
+    Clarke\nDesign By: Jack Galeassi & Adeel Karim \n\n"
 --- !u!222 &2073050443
 CanvasRenderer:
   m_ObjectHideFlags: 0

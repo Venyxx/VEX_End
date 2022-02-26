@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6732190372602041941}
   - component: {fileID: 5227793988268017070}
   - component: {fileID: 2027804147099686287}
+  - component: {fileID: 2051461093}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c103cb3e2925d914c801bd1ca616868f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,8 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  playerDistance: 2
-  awareAI: 10
+  playerDistance: 0
+  awareAI: 50
   aiMoveSpeed: 20
   damping: 6
   navPoint:
@@ -121,7 +122,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  agent: {fileID: 0}
+  agent: {fileID: 2027804147099686287}
   destinationPoint: 0
   goal: {fileID: 0}
 --- !u!195 &2027804147099686287
@@ -134,8 +135,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.5
-  m_Speed: 17
-  m_Acceleration: 8
+  m_Speed: 50
+  m_Acceleration: 12
   avoidancePriority: 1
   m_AngularSpeed: 90
   m_StoppingDistance: 0
@@ -146,6 +147,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2051461093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721262217625195469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103488c5bf209e54a8d65bbc04f66dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7747656444836352663
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c103cb3e2925d914c801bd1ca616868f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

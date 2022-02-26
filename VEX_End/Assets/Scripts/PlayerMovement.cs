@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
@@ -37,5 +37,17 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+       void OnCollisionEnter (Collision other)
+    {
+        if (other.collider.tag == "Enemy")
+        {
+            //SceneManager.LoadScene("Lose Screen");
+            Debug.Log("you died");
+        }
+        else if (other.collider.tag == "Win")
+        {
+            SceneManager.LoadScene("Credits");
+        }
     }
 }

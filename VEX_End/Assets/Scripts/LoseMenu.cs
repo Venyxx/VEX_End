@@ -8,6 +8,12 @@ public class LoseMenu : MonoBehaviour
 
     public GameObject endUI;
 
+    void Start ()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void MainMenu()
     {
         Cursor.lockState = CursorLockMode.None;

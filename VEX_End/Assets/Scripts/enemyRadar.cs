@@ -7,22 +7,25 @@ public class enemyRadar : MonoBehaviour
     public GameObject lastHit;
     public Vector3 collision = Vector3.zero;
     public LayerMask layer;
+    public Rigidbody rigidbodyHere;
+    public Vector3 lookdirection;
+
+    void Start ()
+    {
+        rigidbodyHere = GetComponent<Rigidbody>();
+    }
     void Update()
     {
-        var ray = new Ray(this.transform.position, this.transform.forward);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100))
-        {
-            lastHit = hit.transform.gameObject;
-            collision = hit.point;
-        }
-
-
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(collision, 0.2f);
+        /*RaycastHit hit = Physics.Raycast(rigidbodyHere.position, lookDirection, 100f, LayerMask.GetMask("Enemy"));
+            if (hit.collider.tag == "Player")
+            {
+                PlayerMovement character = hit.collider.GetComponent<PlayerMovement>();
+                if (character != null)
+                {
+                    Debug.Log("noticed player");
+                    
+                }
+            }
+            */
     }
 }

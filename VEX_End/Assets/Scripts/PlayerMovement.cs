@@ -42,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.collider.tag == "Enemy")
         {
-            //SceneManager.LoadScene("Lose Screen");
+            SceneManager.LoadScene("LoseScene");
             Debug.Log("you died");
         }
         else if (other.collider.tag == "Win")
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene("WinScene");
         }
     }
 }

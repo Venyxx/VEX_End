@@ -18,6 +18,7 @@ public class EnemyControl : MonoBehaviour
 
     //navigation and location storage-------------
     public Transform[] navPoint;
+    public Transform playertransform;
     public UnityEngine.AI.NavMeshAgent agent;
     public int destinationPoint = 0;
     public Transform goal;
@@ -41,10 +42,11 @@ public class EnemyControl : MonoBehaviour
             //too close
             LookAtPlayer();
             awareAI = 200; 
-            Debug.Log(awareAI);
+            //Debug.Log(awareAI);
             
         }else 
-            awareAI = 50; 
+            awareAI = 50;
+             
             
 
         if (playerDistance < awareAI)
@@ -52,12 +54,14 @@ public class EnemyControl : MonoBehaviour
             //far too close
             if (playerDistance > 10f)
             {
-                Chase();
+                agent.destination = playertransform.position;
+                agent.acceleration = 24;
                 
             }
         }
         else 
         awareAI = 50;
+        
         
         
         
@@ -87,7 +91,17 @@ public class EnemyControl : MonoBehaviour
     void Chase()
     {
         
-        transform.Translate(Vector3.forward * 2 * aiMoveSpeed * Time.deltaTime);
-        agent.speed = 0;
+        //transform.Translate(Vector3.forward * 2 * aiMoveSpeed * Time.deltaTime);
+        //agent.speed = 0;
+    }  void OnCollisionEnter (Collision other)
+    {
+        PlayerMovement character = other.gameObject.GetComponent<PlayerMovement>();
+        if (other.collider.tag == "Player")
+        {
+            //SceneManager.LoadScene("Lose Screen");
+            Debug.Log("you died");
+            
+        }
+        
     }
 }

@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 1933548424086802091}
   - component: {fileID: 1933548424086802089}
   - component: {fileID: 1933548424086802088}
+  - component: {fileID: 3350954694015922310}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -56,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933548424086802090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_Children: []
   m_Father: {fileID: 1933548424741980700}
@@ -111,6 +112,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &3350954694015922310
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933548424086802090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.60473114
+  m_Height: 2.3823943
+  m_Direction: 1
+  m_Center: {x: 0.00000007662771, y: -0.08835318, z: -0.015377035}
 --- !u!1 &1933548424716560459
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,13 +152,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933548424716560459}
-  m_LocalRotation: {x: 0.6859172, y: -0, z: -0, w: 0.7276796}
+  m_LocalRotation: {x: -0.008809927, y: -0, z: -0, w: 0.9999612}
   m_LocalPosition: {x: 0, y: 1.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1933548424741980700}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 86.616, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.01, y: 0, z: 0}
 --- !u!20 &1933548424716560457
 Camera:
   m_ObjectHideFlags: 0
@@ -219,6 +234,7 @@ GameObject:
   - component: {fileID: 1933548424741980700}
   - component: {fileID: 1933548424741980703}
   - component: {fileID: 1933548424741980701}
+  - component: {fileID: 985225421}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
@@ -235,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 1933548424741980702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17.46, y: 17.46, z: 17.46}
+  m_LocalScale: {x: 5.1856475, y: 5.1856475, z: 5.1856475}
   m_Children:
   - {fileID: 1933548424086802091}
   - {fileID: 1933548424716560462}
@@ -274,10 +290,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1933548424741980703}
-  speed: 12
-  gravity: -9.81
+  speed: 100
+  gravity: -9.8
   groundCheck: {fileID: 1933548424026552186}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!195 &985225421
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933548424741980702}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 10
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1.69
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

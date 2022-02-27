@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class enemyRadar : MonoBehaviour
 {
-     int mask = (1 << 7);
+    public GameObject lastHit;
+    public Vector3 collision = Vector3.zero;
+    public LayerMask layer;
     void Update()
     {
+        var ray = new Ray(this.transform.position, this.transform.forward);
         RaycastHit hit;
-        
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, mask))
+        if (Physics.Raycast(ray, out hit, 100))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * Mathf.Infinity, Color.yellow);
-            //Debug.Log("Hit");
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-            //Debug.Log("No Hit");
+            lastHit = hit.transform.gameObject;
+            collision = hit.point;
         }
 
 
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(collision, 0.2f);
     }
 }

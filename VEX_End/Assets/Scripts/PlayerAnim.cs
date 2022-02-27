@@ -18,4 +18,8 @@ public class PlayerAnim : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
     }
+    void LoseScene ()
+    {
+        Debug.Log("you losy");
+    }
 }

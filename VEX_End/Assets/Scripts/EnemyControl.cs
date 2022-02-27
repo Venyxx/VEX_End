@@ -98,7 +98,8 @@ public class EnemyControl : MonoBehaviour
         PlayerMovement character = other.gameObject.GetComponent<PlayerMovement>();
         if (other.collider.tag == "Player")
         {
-            //SceneManager.LoadScene("Lose Screen");
+            Cursor.visible = true;
+            SceneManager.LoadScene("LoseScene");
             Debug.Log("you died");
             
         }

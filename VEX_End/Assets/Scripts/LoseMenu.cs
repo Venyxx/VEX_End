@@ -10,13 +10,13 @@ public class LoseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        Cursor.lockState = CursorLockMode.None;
+       
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
     public void ExitGame()
     {
-        Cursor.lockState = CursorLockMode.None;
+        
         Debug.Log("you are quitten");
         Application.Quit();
     }

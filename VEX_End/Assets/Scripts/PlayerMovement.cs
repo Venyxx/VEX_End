@@ -45,8 +45,9 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("LoseScene");
             Debug.Log("you died");
         }
-        else if (other.collider.tag == "Win")
+        else if (other.collider.tag == "wonthegame")
         {
+            Debug.Log("detected win condition");
             SceneManager.LoadScene("WinScene");
         }
     }

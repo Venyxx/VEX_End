@@ -6,16 +6,11 @@ public class lamp : MonoBehaviour
 {
     public GameObject lightobj;
     public Vector3 lightpointloc;
-    void OnCollisionEnter (Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-       
-       if (other.collider.tag == "Player")
-        {
-         Debug.Log ("noticed light hit");
-         spawnLight();   
-        }
-        
-    }
+        Debug.Log("noticed light");
+        spawnLight();
+    } 
 
     void spawnLight ()
     {

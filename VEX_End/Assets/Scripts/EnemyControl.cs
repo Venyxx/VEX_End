@@ -67,7 +67,8 @@ public class EnemyControl : MonoBehaviour
         
         if (agent.remainingDistance < 9f)
             
-            goToNextPoint(); 
+            goToNextPoint();
+            Debug.Log(destinationPoint);
             
     }
 

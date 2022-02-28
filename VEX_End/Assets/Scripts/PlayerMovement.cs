@@ -51,4 +51,6 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("WinScene");
         }
     }
+
+    
 }

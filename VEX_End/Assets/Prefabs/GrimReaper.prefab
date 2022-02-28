@@ -2181,6 +2181,7 @@ GameObject:
   - component: {fileID: 7819414886948896199}
   - component: {fileID: 7819414886948896197}
   - component: {fileID: 7819414886948896198}
+  - component: {fileID: 7694023067519519542}
   m_Layer: 0
   m_Name: GrimReaper
   m_TagString: Untagged
@@ -2276,6 +2277,25 @@ MonoBehaviour:
   agent: {fileID: 7819414886948896197}
   destinationPoint: 0
   goal: {fileID: 0}
+--- !u!95 &7694023067519519542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937036257604456825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d9b871cdf3ca6843b672f266c83c705, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6942844883472218725
 GameObject:
   m_ObjectHideFlags: 0
